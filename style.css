@@ -161,6 +161,7 @@ nav ul a:hover,.c-list .item:hover b{color:var(--gold)}
   footer .wrap{flex-direction:column;gap:6px;padding-right:20px;padding-bottom:70px}
   .wa-float{right:18px;bottom:18px;width:58px;height:58px}
   .wa-float .tip{display:none}
+}
 /* VISOR DE CERTIFICADOS */
 .cert .thumb img{cursor:zoom-in;transition:transform .3s}
 .cert .thumb:hover img{transform:scale(1.05)}
@@ -170,5 +171,4 @@ nav ul a:hover,.c-list .item:hover b{color:var(--gold)}
 .lightbox.open img{transform:scale(1)}
 .lb-caption{color:#e6cf8f;font-family:Georgia,serif;font-size:18px;margin-top:16px;text-align:center}
 .lb-close{position:absolute;top:18px;right:22px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;font-size:22px;cursor:pointer}
-.lb-close:hover{background:rgba(255,255,255,.1)}  
-}
+.lb-close:hover{background:rgba(255,255,255,.1)} 
