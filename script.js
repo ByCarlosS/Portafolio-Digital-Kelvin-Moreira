@@ -11,4 +11,23 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
   const cuerpo = f.m.value + '\n\n' + f.n.value + ' (' + f.e.value + ')';
   window.location.href = 'mailto:kelvinm2903@gmail.com?subject=' +
     encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+  // Visor de certificados: amplía la imagen en la misma página
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+const lbCaption = document.getElementById('lb-caption');
+document.querySelectorAll('.zoom').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    lbImg.src = link.getAttribute('href');
+    lbCaption.textContent = link.closest('.cert').querySelector('h4').textContent;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+function cerrarVisor() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+lb.addEventListener('click', (e) => { if (e.target !== lbImg) cerrarVisor(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarVisor(); });
 });
